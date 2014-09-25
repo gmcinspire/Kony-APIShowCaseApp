@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<application id="ApiTechSpikes" name="ApiTechSpikes">
+    <container displayname="Form" id="frmOutputHtml" type="form"/>
+    <container displayname="Form" id="frmStart" type="form">
+        <component displayname="TextBox2" id="textboxCorrId" type="textbox2"/>
+    </container>
+    <globalsequences/>
+    <skins/>
+</application>

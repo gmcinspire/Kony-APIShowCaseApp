@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<application name="GmcMobileProof" id="GmcMobileProof">
+    <container type="form" id="frmOutputHtml" displayname="Form"/>
+    <container type="form" id="frmStart" displayname="Form">
+        <component type="textbox2" id="textboxCorrId" displayname="TextBox2"/>
+        <component type="textbox2" id="textboxName" displayname="TextBox2"/>
+        <component type="textbox2" id="textboxSurname" displayname="TextBox2"/>
+    </container>
+    <globalsequences/>
+    <skins/>
+</application>

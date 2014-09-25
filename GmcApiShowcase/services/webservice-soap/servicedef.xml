@@ -1,0 +1,277 @@
+<application desc="" id="GmcApiShowcase" name="" smscode="">
+   <app-config>
+      <config-param name="APP_SMS_HEADER" value="null"/>
+   </app-config>
+   <services>
+      <service cachable="false" cacheduration="" id="CreateSign" passwordencrypted="true" smscode="" smsenabled="false" type="soapserviceConnector">
+         <service-config>
+            <config-param name="endpointUrl" value="http://dynamiccontract.gmc.net/mobileapi/DocumentSign.asmx"/>
+            <config-param name="soapAction" value="www.gmc.net/PNetTWebService/PNetTWebServices/CreateSign"/>
+            <config-param name="userid" value="demo"/>
+            <config-param name="soap-version" value="1.1"/>
+            <config-param name="pwd" value="voYeW7PkBnrFgbmXgdxwOw=="/>
+            <config-param name="postprocessorname" value=""/>
+            <config-param name="preprocessorname" value=""/>
+            <config-param name="urlprovider" value=""/>
+            <config-param name="dataprovider" value=""/>
+            <config-param name="sockettimeout" value=""/>
+            <config-param name="proxyname" value=""/>
+            <config-param name="proxyport" value=""/>
+            <config-param name="proxyusername" value=""/>
+            <config-param name="isembedxmlpresent" value="true"/>
+            <config-param name="ignorehttpproxy" value="false"/>
+            <config-param name="responseEncoding" value="UTF-8"/>
+            <config-param name="server.auth.mode" value="basic"/>
+            <config-param name="server.auth.host" value=""/>
+            <config-param name="server.auth.ntlm.domain" value=""/>
+         </service-config>
+         <service-input>
+            <template-param name="message" value="&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soap:Header&gt;&lt;AuthenticationSoapHeader xmlns=&quot;www.gmc.net/PNetTWebService/PNetTWebServices&quot;&gt;&lt;Name&gt;demo&lt;/Name&gt;&lt;Pwd&gt;pass&lt;/Pwd&gt;&lt;AuthAlgorithm&gt;Plain&lt;/AuthAlgorithm&gt;&lt;/AuthenticationSoapHeader&gt;&lt;/soap:Header&gt;&lt;soap:Body&gt;&lt;CreateSign xmlns=&quot;www.gmc.net/PNetTWebService/PNetTWebServices&quot;&gt;&lt;comCreateSignReq account=&quot;default&quot; msgVersion=&quot;700&quot;&gt;&lt;PackageInfo description=&quot;$packageDescription&quot; name=&quot;$packageName&quot;/&gt;&lt;Document id=&quot;$documentId&quot; name=&quot;$documentName&quot;&gt;&lt;RunRequest&gt;&lt;workFlowDefinition&gt;&lt;source&gt;&lt;correlationId&gt;$corrId&lt;/correlationId&gt;&lt;/source&gt;&lt;/workFlowDefinition&gt;&lt;dataDefinition&gt;&lt;dataModuleName&gt;XMLDataInput1&lt;/dataModuleName&gt;&lt;source&gt;&lt;xmlData&gt;&lt;contract&gt;&lt;client&gt;&lt;name&gt;$clientName&lt;/name&gt;&lt;surname&gt;$clientSurname&lt;/surname&gt;&lt;street&gt;$clientStreet&lt;/street&gt;&lt;streetNumber&gt;$clientStreetNumber&lt;/streetNumber&gt;&lt;city&gt;$clientCity&lt;/city&gt;&lt;state&gt;$clientState&lt;/state&gt;&lt;zipCode&gt;$clientZipCode&lt;/zipCode&gt;&lt;country&gt;$clientCountry&lt;/country&gt;&lt;phoneNumber&gt;$clientPhone&lt;/phoneNumber&gt;&lt;email&gt;$clientEmail&lt;/email&gt;&lt;/client&gt;&lt;agent&gt;&lt;id&gt;$agentId&lt;/id&gt;&lt;name&gt;$agentName&lt;/name&gt;&lt;surname&gt;$agentSurname&lt;/surname&gt;&lt;title&gt;Representative&lt;/title&gt;&lt;/agent&gt;&lt;contractData&gt;&lt;totalIncome&gt;$contractTotalIncome&lt;/totalIncome&gt;&lt;atmUsage&gt;$contractAtmUsage&lt;/atmUsage&gt;&lt;cashAdvanceTaking&gt;$contractCashAdvanceTaking&lt;/cashAdvanceTaking&gt;&lt;expressDelivery&gt;$contractExpressDelivery&lt;/expressDelivery&gt;&lt;/contractData&gt;&lt;/contract&gt;&lt;/xmlData&gt;&lt;/source&gt;&lt;/dataDefinition&gt;&lt;/RunRequest&gt;#foreach $signature &lt;Signature signerId=&quot;$signerId&quot;&gt;&lt;Position height=&quot;$signatureHeight&quot; onPage=&quot;$signatureOnPage&quot; width=&quot;$signatureWidth&quot; x=&quot;$signatureXPosition&quot; y=&quot;$signatureYPosition&quot;/&gt;&lt;/Signature&gt;#end &lt;/Document&gt;#foreach $signer &lt;Signer id=&quot;$signerId&quot;&gt;&lt;Name&gt;$signerName&lt;/Name&gt;&lt;Surname&gt;$signerSurname&lt;/Surname&gt;&lt;Email&gt;$signerEmail&lt;/Email&gt;&lt;/Signer&gt;#end&lt;/comCreateSignReq&gt;&lt;/CreateSign&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;">
+               <param datatype="string" encode="true" name="clientName" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="clientSurname" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="clientStreet" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="clientStreetNumber" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="clientCity" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="clientState" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="clientZipCode" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="clientCountry" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="clientPhone" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="clientEmail" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="agentId" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="agentName" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="agentSurname" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="contractTotalIncome" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="contractAtmUsage" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="contractCashAdvanceTaking" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="contractExpressDelivery" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="corrId" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="packageName" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="packageDescription" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="documentName" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="documentId" sms-name="" src="request" value=""/>
+               <param datatype="collection" encode="true" name="signer" sms-name="" src="request" value=""/>
+               <param datatype="collection" encode="true" name="signature" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="fdd" sms-name="" src="" value=""/>
+            </template-param>
+         </service-input>
+         <service-output>
+            <param datatype="string" format="None" formatvalue="" name="packageId" sms-name="" src="//Package/@Id" srcformatvalue="" target="response"/>
+            <dataset id="signers" src="//Package/Sign">
+               <param datatype="string" format="None" formatvalue="" name="signerId" sms-name="" src="//@idSigner" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="token" sms-name="" src="//Token" srcformatvalue="" target="response"/>
+            </dataset>
+            <dataset id="errorCollection" src="//ErrorCollection">
+               <param datatype="string" format="None" formatvalue="" name="errorCode" sms-name="" src="//Error/ErrorCode" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="errorMessage" sms-name="" src="//Error/ErrorMessage" srcformatvalue="" target="response"/>
+            </dataset>
+            <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" srcformatvalue="" target=""/>
+         </service-output>
+      </service>
+      <service cachable="false" cacheduration="" id="GetPackageStatus" passwordencrypted="true" smscode="" smsenabled="false" type="soapserviceConnector">
+         <service-config>
+            <config-param name="endpointUrl" value="http://dynamiccontract.gmc.net/mobileapi/DocumentSign.asmx"/>
+            <config-param name="soapAction" value="www.gmc.net/PNetTWebService/PNetTWebServices/GetPackageStatus"/>
+            <config-param name="userid" value="demo"/>
+            <config-param name="soap-version" value="1.1"/>
+            <config-param name="pwd" value="voYeW7PkBnrFgbmXgdxwOw=="/>
+            <config-param name="postprocessorname" value=""/>
+            <config-param name="preprocessorname" value=""/>
+            <config-param name="urlprovider" value=""/>
+            <config-param name="dataprovider" value=""/>
+            <config-param name="sockettimeout" value=""/>
+            <config-param name="proxyname" value=""/>
+            <config-param name="proxyport" value=""/>
+            <config-param name="proxyusername" value=""/>
+            <config-param name="isembedxmlpresent" value="false"/>
+            <config-param name="ignorehttpproxy" value="false"/>
+            <config-param name="responseEncoding" value="UTF-8"/>
+            <config-param name="server.auth.mode" value="basic"/>
+            <config-param name="server.auth.host" value=""/>
+            <config-param name="server.auth.ntlm.domain" value=""/>
+         </service-config>
+         <service-input>
+            <template-param name="message" value="&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soap:Header&gt;&lt;AuthenticationSoapHeader xmlns=&quot;www.gmc.net/PNetTWebService/PNetTWebServices&quot;&gt;&lt;Name&gt;demo&lt;/Name&gt;&lt;Pwd&gt;pass&lt;/Pwd&gt;&lt;AuthAlgorithm&gt;Plain&lt;/AuthAlgorithm&gt;&lt;/AuthenticationSoapHeader&gt;&lt;/soap:Header&gt;&lt;soap:Body&gt;&lt;GetPackageStatus xmlns=&quot;www.gmc.net/PNetTWebService/PNetTWebServices&quot;&gt;&lt;comGetPackageStatusReq account=&quot;default&quot;&gt;&lt;Package id=&quot;$packageId&quot;/&gt;&lt;/comGetPackageStatusReq&gt;&lt;/GetPackageStatus&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;">
+               <param datatype="string" encode="true" name="packageId" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="documentId" sms-name="" src="request" value=""/>
+            </template-param>
+         </service-input>
+         <service-output>
+            <dataset id="documents" src="//Package">
+               <param datatype="string" format="None" formatvalue="" name="status" sms-name="" src="Document/@Status" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="id" sms-name="" src="Document/@Id" srcformatvalue="" target="response"/>
+               <dataset id="signers" src="Document">
+                  <param datatype="string" format="None" formatvalue="" name="id" sms-name="" src="Sign/@Id" srcformatvalue="" target="response"/>
+                  <param datatype="string" format="None" formatvalue="" name="status" sms-name="" src="Sign/@Status" srcformatvalue="" target="response"/>
+               </dataset>
+               <param datatype="string" format="None" formatvalue="" name="documentName" sms-name="" src="Document/@DocumentName" srcformatvalue="" target="response"/>
+            </dataset>
+            <dataset id="errorCollection" src="//ErrorCollection">
+               <param datatype="string" format="None" formatvalue="" name="errorCode" sms-name="" src="//Error/ErrorCode" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="errorMessage" sms-name="" src="//Error/ErrorMessage" srcformatvalue="" target="response"/>
+            </dataset>
+            <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" srcformatvalue="" target=""/>
+         </service-output>
+      </service>
+      <service cachable="false" cacheduration="" id="List" passwordencrypted="true" smscode="" smsenabled="false" type="soapserviceConnector">
+         <service-config>
+            <config-param name="endpointUrl" value="http://dynamiccontract.gmc.net/mobileapi/dbs/xmldb.asmx"/>
+            <config-param name="soapAction" value="www.gmc.net/PNetTWebService/PNetTWebServices/List"/>
+            <config-param name="userid" value="demo"/>
+            <config-param name="soap-version" value="1.1"/>
+            <config-param name="pwd" value="voYeW7PkBnrFgbmXgdxwOw=="/>
+            <config-param name="postprocessorname" value=""/>
+            <config-param name="preprocessorname" value=""/>
+            <config-param name="urlprovider" value=""/>
+            <config-param name="dataprovider" value=""/>
+            <config-param name="sockettimeout" value=""/>
+            <config-param name="proxyname" value=""/>
+            <config-param name="proxyport" value=""/>
+            <config-param name="proxyusername" value=""/>
+            <config-param name="isembedxmlpresent" value="false"/>
+            <config-param name="ignorehttpproxy" value="false"/>
+            <config-param name="responseEncoding" value="UTF-8"/>
+            <config-param name="server.auth.mode" value="basic"/>
+            <config-param name="server.auth.host" value=""/>
+            <config-param name="server.auth.ntlm.domain" value=""/>
+         </service-config>
+         <service-input>
+            <template-param name="message" value="&lt;soapenv:Envelope xmlns:pnet=&quot;www.gmc.net/PNetTWebService/PNetTWebServices&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soapenv:Header&gt;&lt;pnet:AuthenticationSoapHeader&gt;&lt;!--Optional:--&gt;&lt;pnet:Name&gt;demo&lt;/pnet:Name&gt;&lt;!--Optional:--&gt;&lt;pnet:Pwd&gt;pass&lt;/pnet:Pwd&gt;&lt;pnet:AuthAlgorithm&gt;Plain&lt;/pnet:AuthAlgorithm&gt;&lt;/pnet:AuthenticationSoapHeader&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;pnet:List&gt;&lt;!--Optional:--&gt;&lt;pnet:ListReq ListType=&quot;Files&quot; path=&quot;$path&quot; recursive=&quot;false&quot;&gt;&lt;!--Optional:--&gt;&lt;pnet:systemData Copy=&quot;true&quot;&gt;&lt;!--You may enter ANY elements at this point--&gt;&lt;/pnet:systemData&gt;&lt;pnet:Columns&gt;CorrelationID&lt;/pnet:Columns&gt;&lt;pnet:Columns&gt;FullPath&lt;/pnet:Columns&gt;&lt;pnet:Columns&gt;Title&lt;/pnet:Columns&gt;&lt;pnet:Columns&gt;Description&lt;/pnet:Columns&gt;&lt;pnet:Columns&gt;CardNumber&lt;/pnet:Columns&gt;&lt;/pnet:ListReq&gt;&lt;/pnet:List&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;">
+               <param datatype="string" encode="true" name="path" sms-name="" src="request" value=""/>
+            </template-param>
+         </service-input>
+         <service-output>
+            <dataset id="documents" src="//ListResponse/ListResult/Items/Rows">
+               <param datatype="string" format="None" formatvalue="" name="corrId" sms-name="" src="//Cells[1]" srcformatvalue="" target=""/>
+               <param datatype="string" format="None" formatvalue="" name="fullPath" sms-name="" src="//Cells[2]" srcformatvalue="" target=""/>
+               <param datatype="string" format="None" formatvalue="" name="title" sms-name="" src="//Cells[3]" srcformatvalue="" target=""/>
+               <param datatype="string" format="None" formatvalue="" name="description" sms-name="" src="//Cells[4]" srcformatvalue="" target=""/>
+               <param datatype="string" format="None" formatvalue="" name="number" sms-name="" src="//Cells[5]" srcformatvalue="" target=""/>
+            </dataset>
+            <param datatype="string" format="None" formatvalue="" name="opstatus" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" srcformatvalue="" target=""/>
+         </service-output>
+      </service>
+      <service cachable="false" cacheduration="" id="QueryProperties" passwordencrypted="true" smscode="" smsenabled="false" type="soapserviceConnector">
+         <service-config>
+            <config-param name="endpointUrl" value="http://dynamiccontract.gmc.net/mobileapi/PNetTServices.asmx"/>
+            <config-param name="soapAction" value="www.gmc.net/PNetTWebService/PNetTWebServices/QueryProperties"/>
+            <config-param name="userid" value="demo"/>
+            <config-param name="soap-version" value="1.1"/>
+            <config-param name="pwd" value="voYeW7PkBnrFgbmXgdxwOw=="/>
+            <config-param name="postprocessorname" value=""/>
+            <config-param name="preprocessorname" value=""/>
+            <config-param name="urlprovider" value=""/>
+            <config-param name="dataprovider" value=""/>
+            <config-param name="sockettimeout" value=""/>
+            <config-param name="proxyname" value=""/>
+            <config-param name="proxyport" value=""/>
+            <config-param name="proxyusername" value=""/>
+            <config-param name="isembedxmlpresent" value="false"/>
+            <config-param name="ignorehttpproxy" value="true"/>
+            <config-param name="responseEncoding" value="UTF-8"/>
+            <config-param name="server.auth.mode" value="basic"/>
+            <config-param name="server.auth.host" value=""/>
+            <config-param name="server.auth.ntlm.domain" value=""/>
+         </service-config>
+         <service-input>
+            <template-param name="message" value="&lt;soapenv:Envelope xmlns:pnet=&quot;www.gmc.net/PNetTWebService/PNetTWebServices&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soapenv:Header&gt;&lt;AuthenticationSoapHeader xmlns=&quot;www.gmc.net/PNetTWebService/PNetTWebServices&quot;&gt;&lt;Name&gt;demo&lt;/Name&gt;&lt;Pwd&gt;pass&lt;/Pwd&gt;&lt;AuthAlgorithm&gt;Plain&lt;/AuthAlgorithm&gt;&lt;/AuthenticationSoapHeader&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;pnet:QueryProperties&gt;&lt;pnet:runWorkFlowReq msgVersion=&quot;700&quot;&gt;&lt;pnet:workFlowDefinition&gt;&lt;pnet:source&gt;&lt;pnet:correlationId&gt;$corrId&lt;/pnet:correlationId&gt;&lt;/pnet:source&gt;&lt;/pnet:workFlowDefinition&gt;&lt;pnet:useProofCache&gt;true&lt;/pnet:useProofCache&gt;&lt;pnet:command&gt;&lt;pnet:commandName&gt;-e&lt;/pnet:commandName&gt;&lt;pnet:commandValue&gt;info&lt;/pnet:commandValue&gt;&lt;/pnet:command&gt;&lt;pnet:responseDefinition QueryProperties=&quot;true&quot;/&gt;&lt;/pnet:runWorkFlowReq&gt;&lt;/pnet:QueryProperties&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;">
+               <param datatype="string" encode="true" name="corrId" sms-name="" src="request" value=""/>
+            </template-param>
+         </service-input>
+         <service-output>
+            <dataset id="properties" src="//QueryPropertiesResponse/queryJobPropertiesRes/JobProperties">
+               <param datatype="string" format="None" formatvalue="" name="totalSheetCount" sms-name="" src="Property/Name[text()='TotalSheetCount']/ancestor::Property/Value" srcformatvalue="" target="response"/>
+            </dataset>
+            <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" srcformatvalue="" target=""/>
+         </service-output>
+      </service>
+      <service cachable="false" cacheduration="" id="RunJob" passwordencrypted="true" smscode="" smsenabled="false" type="soapserviceConnector">
+         <service-config>
+            <config-param name="endpointUrl" value="http://dynamiccontract.gmc.net/mobileapi/PNetTServices.asmx"/>
+            <config-param name="soapAction" value="www.gmc.net/PNetTWebService/PNetTWebServices/RunJob"/>
+            <config-param name="userid" value="demo"/>
+            <config-param name="soap-version" value="1.1"/>
+            <config-param name="pwd" value="voYeW7PkBnrFgbmXgdxwOw=="/>
+            <config-param name="postprocessorname" value=""/>
+            <config-param name="preprocessorname" value=""/>
+            <config-param name="urlprovider" value=""/>
+            <config-param name="dataprovider" value=""/>
+            <config-param name="sockettimeout" value=""/>
+            <config-param name="proxyname" value=""/>
+            <config-param name="proxyport" value=""/>
+            <config-param name="proxyusername" value=""/>
+            <config-param name="isembedxmlpresent" value="false"/>
+            <config-param name="ignorehttpproxy" value="false"/>
+            <config-param name="responseEncoding" value="UTF-8"/>
+            <config-param name="server.auth.mode" value="basic"/>
+            <config-param name="server.auth.host" value=""/>
+            <config-param name="server.auth.ntlm.domain" value=""/>
+         </service-config>
+         <service-input>
+            <template-param name="message" value="&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soap:Header&gt;&lt;AuthenticationSoapHeader xmlns=&quot;www.gmc.net/PNetTWebService/PNetTWebServices&quot;&gt;&lt;Name&gt;demo&lt;/Name&gt;&lt;Pwd&gt;pass&lt;/Pwd&gt;&lt;AuthAlgorithm&gt;Plain&lt;/AuthAlgorithm&gt;&lt;/AuthenticationSoapHeader&gt;&lt;/soap:Header&gt;&lt;soap:Body&gt;&lt;RunJob xmlns=&quot;www.gmc.net/PNetTWebService/PNetTWebServices&quot;&gt;&lt;runWorkFlowReq msgVersion=&quot;700&quot;&gt;&lt;workFlowDefinition&gt;&lt;source&gt;&lt;correlationId&gt;$corrId&lt;/correlationId&gt;&lt;/source&gt;&lt;/workFlowDefinition&gt;&lt;dataDefinition&gt;&lt;dataModuleName&gt;XMLDataInput&lt;/dataModuleName&gt;&lt;source&gt;&lt;xmlData&gt;&lt;inputData&gt;&lt;name&gt;$name&lt;/name&gt;&lt;surname&gt;$surname&lt;/surname&gt;&lt;/inputData&gt;&lt;/xmlData&gt;&lt;/source&gt;&lt;/dataDefinition&gt;&lt;command&gt;&lt;commandName&gt;-e&lt;/commandName&gt;&lt;commandValue&gt;$engine&lt;/commandValue&gt;&lt;/command&gt;&lt;command&gt;&lt;commandName&gt;-o&lt;/commandName&gt;&lt;commandValue&gt;OutputMobile&lt;/commandValue&gt;&lt;/command&gt;&lt;responseDefinition&gt;&lt;synchronous&gt;true&lt;/synchronous&gt;&lt;responseType&gt;tTemporaryUrl&lt;/responseType&gt;&lt;/responseDefinition&gt;&lt;/runWorkFlowReq&gt;&lt;/RunJob&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;">
+               <param datatype="string" encode="true" name="corrId" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="engine" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="name" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="surname" sms-name="" src="request" value=""/>
+            </template-param>
+         </service-input>
+         <service-output>
+            <dataset id="errors" src="*//RunJobResponse/runWorkFlowRes/ErrorCollection">
+               <param datatype="string" format="None" formatvalue="" name="errorCode" sms-name="" src="Error/ErrorCode" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="errorMessage" sms-name="" src="Error/ErrorMessage" srcformatvalue="" target="response"/>
+            </dataset>
+            <param datatype="string" format="None" formatvalue="" name="url" sms-name="" src="*//RunJobResponse/runWorkFlowRes/source/url" srcformatvalue="" target="response"/>
+            <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" srcformatvalue="" target=""/>
+         </service-output>
+      </service>
+      <service cachable="false" cacheduration="" id="RunJobMultipage" passwordencrypted="true" smscode="" smsenabled="false" type="soapserviceConnector">
+         <service-config>
+            <config-param name="endpointUrl" value="http://dynamiccontract.gmc.net/mobileapi/PNetTServices.asmx"/>
+            <config-param name="soapAction" value="www.gmc.net/PNetTWebService/PNetTWebServices/RunJob"/>
+            <config-param name="userid" value="demo"/>
+            <config-param name="soap-version" value="1.1"/>
+            <config-param name="pwd" value="voYeW7PkBnrFgbmXgdxwOw=="/>
+            <config-param name="postprocessorname" value=""/>
+            <config-param name="preprocessorname" value=""/>
+            <config-param name="urlprovider" value=""/>
+            <config-param name="dataprovider" value=""/>
+            <config-param name="sockettimeout" value=""/>
+            <config-param name="proxyname" value=""/>
+            <config-param name="proxyport" value=""/>
+            <config-param name="proxyusername" value=""/>
+            <config-param name="isembedxmlpresent" value="false"/>
+            <config-param name="ignorehttpproxy" value="false"/>
+            <config-param name="responseEncoding" value="UTF-8"/>
+            <config-param name="server.auth.mode" value="basic"/>
+            <config-param name="server.auth.host" value=""/>
+            <config-param name="server.auth.ntlm.domain" value=""/>
+         </service-config>
+         <service-input>
+            <template-param name="message" value="&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soap:Header&gt;&lt;AuthenticationSoapHeader xmlns=&quot;www.gmc.net/PNetTWebService/PNetTWebServices&quot;&gt;&lt;Name&gt;demo&lt;/Name&gt;&lt;Pwd&gt;pass&lt;/Pwd&gt;&lt;AuthAlgorithm&gt;Plain&lt;/AuthAlgorithm&gt;&lt;/AuthenticationSoapHeader&gt;&lt;/soap:Header&gt;&lt;soap:Body&gt;&lt;RunJob xmlns=&quot;www.gmc.net/PNetTWebService/PNetTWebServices&quot;&gt;&lt;runWorkFlowReq msgVersion=&quot;700&quot;&gt;&lt;workFlowDefinition&gt;&lt;source&gt;&lt;correlationId&gt;$corrId&lt;/correlationId&gt;&lt;/source&gt;&lt;/workFlowDefinition&gt;&lt;command&gt;&lt;commandName&gt;-e&lt;/commandName&gt;&lt;commandValue&gt;$engine&lt;/commandValue&gt;&lt;/command&gt;&lt;command&gt;&lt;commandName&gt;-o&lt;/commandName&gt;&lt;commandValue&gt;OutputMobile&lt;/commandValue&gt;&lt;/command&gt;&lt;command&gt;&lt;commandName&gt;-shbeg&lt;/commandName&gt;&lt;commandValue&gt;$pageNumber&lt;/commandValue&gt;&lt;/command&gt;&lt;command&gt;&lt;commandName&gt;-shend&lt;/commandName&gt;&lt;commandValue&gt;$pageNumber&lt;/commandValue&gt;&lt;/command&gt;&lt;responseDefinition&gt;&lt;synchronous&gt;true&lt;/synchronous&gt;&lt;responseType&gt;tTemporaryUrl&lt;/responseType&gt;&lt;/responseDefinition&gt;&lt;/runWorkFlowReq&gt;&lt;/RunJob&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;">
+               <param datatype="string" encode="true" name="corrId" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="engine" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="pageNumber" sms-name="" src="request" value=""/>
+            </template-param>
+         </service-input>
+         <service-output>
+            <dataset id="errors" src="*//RunJobResponse/runWorkFlowRes/ErrorCollection">
+               <param datatype="string" format="None" formatvalue="" name="errorCode" sms-name="" src="Error/ErrorCode" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="errorMessage" sms-name="" src="Error/ErrorMessage" srcformatvalue="" target="response"/>
+            </dataset>
+            <param datatype="string" format="None" formatvalue="" name="url" sms-name="" src="*//RunJobResponse/runWorkFlowRes/source/url" srcformatvalue="" target="response"/>
+            <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" srcformatvalue="" target=""/>
+         </service-output>
+      </service>
+   </services>
+</application>

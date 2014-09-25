@@ -1,0 +1,163 @@
+var DOCUMENT_ID = "1";
+var EMAIL = "fakemail@froodeco.com";
+var SILANIS_URL = "https://sandbox.e-signlive.com";
+
+function frmSigningOnInit() {
+	frmSigning.defaultAnimationEnabled = false;
+}
+
+function frmSigningPreshow() {
+	var jumpedOut = loadValueFromStore(KEY_JUMPED_OUT);
+	if (jumpedOut){
+		frmSigning.txtName.text = loadValueFromStore(KEY_CLIENT_NAME);
+		frmSigning.txtSurname.text = loadValueFromStore(KEY_CLIENT_SURNAME);
+	}
+	saveValueToStore(KEY_JUMPED_OUT,false);
+}
+
+function frmSigningOnHide() {
+	saveValueToStore(KEY_JUMPED_OUT, false);
+}
+
+function getSingingPageUrl() {
+	invokeCreateSign(asyncCallbackCreateSign);
+}
+
+function getSigningStatus() {
+	invokeGetPackageStatus(asyncCallbackGetPackageStatus);
+}
+
+function invokeCreateSign(asyncCallback) {
+	var serviceDefinition = generateServiceDefinition();
+	var refData = {};
+	showLoadingScreen("Loading...");
+	gmcInvokerAsync(serviceDefinition, asyncCallback, refData);
+}
+
+function invokeGetPackageStatus(asyncCallback) {
+	var packageId = loadValueFromStore(KEY_PACKAGE_ID);
+	if (!packageId) {
+		var title = "Document Status";
+		var message = "You don't have any signed document yet.";
+		gmcAlertInformation(title, message);
+		return;
+	}
+	var serviceDefinition = { 
+			serviceID: "GetPackageStatus",
+			packageId: packageId,
+			documentId: DOCUMENT_ID
+	};
+	var refData = {};
+	showLoadingScreen("Loading...");
+	gmcInvokerAsync(serviceDefinition, asyncCallback, refData);
+}
+
+function generateServiceDefinition() {
+	var clientName = frmSigning.txtName.text,
+		clientSurname = frmSigning.txtSurname.text;
+
+	saveValueToStore(KEY_CLIENT_NAME, clientName);
+	saveValueToStore(KEY_CLIENT_SURNAME, clientSurname);
+
+	var serviceDefinition = { 
+		serviceID: "CreateSign",
+		corrId: SIGNING_DOCUMENT_WFD,
+		clientName: clientName,
+		clientSurname: clientSurname,
+		clientStreet: "Baker Street",
+		clientStreetNumber: "221B",
+		clientCity: "London",
+		clientState: "",
+		clientZipCode: "NW1 6XE",
+		clientCountry: "United Kingdom",
+		clientPhone: "608581266",
+		clientEmail: EMAIL,
+		contractTotalIncome: "20500",
+		agentId: "0",
+		agentName: "Nick",
+		agentSurname: "Lee",
+		contractAtmUsage: "1-3",
+		contractCashAdvanceTaking: "2",
+		contractExpressDelivery: "No",
+		packageName: "PackageFromShowCaseAPI",
+		packageDescription: "Package from ShowCaseAPI app.",
+		documentName: "SampleDocument",
+		documentId: DOCUMENT_ID
+	};
+	addSignerCollection(serviceDefinition, clientName, clientSurname);
+	addSignatureCollection(serviceDefinition);
+	
+	return serviceDefinition;
+}
+
+function addSignerCollection (serviceDefinition, name, surname) {
+	var signers = [];
+	var signer = {};
+	signer.signerId = "1";
+	signer.signerName = name;
+	signer.signerSurname = surname;
+	signer.signerEmail = EMAIL;
+	signers.push(signer);
+	
+	serviceDefinition.signer = JSON.stringify(signers);
+}
+
+function addSignatureCollection (serviceDefinition) {
+	var signatures = [];
+	var signature = {};
+	signature.signerId = "1";
+	signature.signatureXPosition = "500";
+	signature.signatureYPosition = "900";
+	signature.signatureOnPage = "0";
+	signature.signatureHeight = "110";
+	signature.signatureWidth = "200";
+	signatures.push(signature);
+	
+	serviceDefinition.signature = JSON.stringify(signatures);
+}
+
+function asyncCallbackCreateSign(status, response, info) {
+	if (status == 400) {
+		if (isResponseCorrect(response)) {
+			var packageId = response.packageId;
+			var signerToken = response.signers[0].token;
+			saveValueToStore(KEY_PACKAGE_ID, packageId);
+			
+			showSigningPage(signerToken);
+		}
+	}
+	if (isEmptyResponse(response) == false){
+		dismissLoadingScreen();
+	}
+}
+
+function asyncCallbackGetPackageStatus(status, response, info) {
+	if (status == 400) {
+		if (isResponseCorrect(response)) {
+			var document = response.documents[0];
+			var signers = document.signers;
+			signers = (signers.length == 1) ? signers[0] : signers;
+			var signer = signers[1];
+			
+			var title = "Document Status";
+			var message;
+			if (signer.status == "SIGNING_PENDING") {
+				message = "This document is not yet signed.";
+			} else if (signer.status == "COMPLETE") {
+				message = "This document is signed.";
+			} else {
+				message = "This document is waiting for authentication.";
+			}
+			gmcAlertInformation(title, message);
+		}
+	}
+	if (isEmptyResponse(response) == false){
+		dismissLoadingScreen();
+	}
+}
+
+function showSigningPage(signersToken) {
+	var url = decodeURIComponent(SILANIS_URL + "/access?sessionToken=" + signersToken);
+	saveValueToStore(KEY_JUMPED_OUT, true);
+	kony.application.openURL(url);
+}
