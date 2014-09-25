@@ -1,4 +1,5 @@
 var DOCUMENT_ID = "1";
+var SIGNER_ID = "1";
 var EMAIL = "fakemail@froodeco.com";
 var SILANIS_URL = "https://sandbox.e-signlive.com";
 
@@ -64,23 +65,8 @@ function generateServiceDefinition() {
 		corrId: SIGNING_DOCUMENT_WFD,
 		clientName: clientName,
 		clientSurname: clientSurname,
-		clientStreet: "Baker Street",
-		clientStreetNumber: "221B",
-		clientCity: "London",
-		clientState: "",
-		clientZipCode: "NW1 6XE",
-		clientCountry: "United Kingdom",
-		clientPhone: "608581266",
-		clientEmail: EMAIL,
-		contractTotalIncome: "20500",
-		agentId: "0",
-		agentName: "Nick",
-		agentSurname: "Lee",
-		contractAtmUsage: "1-3",
-		contractCashAdvanceTaking: "2",
-		contractExpressDelivery: "No",
 		packageName: "PackageFromShowCaseAPI",
-		packageDescription: "Package from ShowCaseAPI app.",
+		packageDescription: "Package from GMC - Kony API Showcase.",
 		documentName: "SampleDocument",
 		documentId: DOCUMENT_ID
 	};
@@ -93,7 +79,7 @@ function generateServiceDefinition() {
 function addSignerCollection (serviceDefinition, name, surname) {
 	var signers = [];
 	var signer = {};
-	signer.signerId = "1";
+	signer.signerId = SIGNER_ID;
 	signer.signerName = name;
 	signer.signerSurname = surname;
 	signer.signerEmail = EMAIL;
@@ -105,7 +91,7 @@ function addSignerCollection (serviceDefinition, name, surname) {
 function addSignatureCollection (serviceDefinition) {
 	var signatures = [];
 	var signature = {};
-	signature.signerId = "1";
+	signature.signerId = SIGNER_ID;
 	signature.signatureXPosition = "500";
 	signature.signatureYPosition = "900";
 	signature.signatureOnPage = "0";

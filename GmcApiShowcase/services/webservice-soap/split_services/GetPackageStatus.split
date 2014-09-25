@@ -221,13 +221,13 @@
         <outtemplate>&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
    &lt;soap:Header&gt;
       &lt;wsa:Action&gt;www.gmc.net/PNetTWebService/PNetTWebServices/GetPackageStatusResponse&lt;/wsa:Action&gt;
-      &lt;wsa:MessageID&gt;urn:uuid:fbe47712-126e-4908-b6a3-bbf7b7d9c010&lt;/wsa:MessageID&gt;
-      &lt;wsa:RelatesTo&gt;urn:uuid:e632450f-a7e6-43c5-b329-0421b53ae579&lt;/wsa:RelatesTo&gt;
+      &lt;wsa:MessageID&gt;urn:uuid:167cb670-2da4-4d9e-8097-142206c86268&lt;/wsa:MessageID&gt;
+      &lt;wsa:RelatesTo&gt;urn:uuid:98e8f473-ee91-4ca1-a770-e602105753aa&lt;/wsa:RelatesTo&gt;
       &lt;wsa:To&gt;http://schemas.xmlsoap.org/ws/2004/08/addressing/role/anonymous&lt;/wsa:To&gt;
       &lt;wsse:Security&gt;
-         &lt;wsu:Timestamp wsu:Id="Timestamp-39d051b9-0aa8-490a-a37f-3e59445f0b9b"&gt;
-            &lt;wsu:Created&gt;2014-09-19T15:24:52Z&lt;/wsu:Created&gt;
-            &lt;wsu:Expires&gt;2014-09-19T15:29:52Z&lt;/wsu:Expires&gt;
+         &lt;wsu:Timestamp wsu:Id="Timestamp-47be94c7-a916-480d-a3ed-ce02c1443d11"&gt;
+            &lt;wsu:Created&gt;2014-09-25T09:22:09Z&lt;/wsu:Created&gt;
+            &lt;wsu:Expires&gt;2014-09-25T09:27:09Z&lt;/wsu:Expires&gt;
          &lt;/wsu:Timestamp&gt;
       &lt;/wsse:Security&gt;
    &lt;/soap:Header&gt;
@@ -672,7 +672,7 @@
         <smsenabled>false</smsenabled>
         <soapaction>www.gmc.net/PNetTWebService/PNetTWebServices/GetPackageStatus</soapaction>
         <timeout></timeout>
-        <url>http://dynamiccontract.gmc.net/mobileapi/DocumentSign.asmx</url>
+        <url>http://gmcfinovate2014.cloudapp.net/mobileapi/DocumentSign.asmx</url>
         <urlprovider></urlprovider>
         <userid>demo</userid>
         <version>1.1</version>

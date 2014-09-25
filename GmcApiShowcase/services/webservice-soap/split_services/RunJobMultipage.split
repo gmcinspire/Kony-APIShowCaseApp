@@ -109,7 +109,7 @@
                &lt;commandName&gt;-shend&lt;/commandName&gt;
                &lt;commandValue&gt;$pageNumber&lt;/commandValue&gt;
             &lt;/command&gt;
-            &lt;responseDefinition&gt;
+            &lt;responseDefinition AuthenticateUrl="true"&gt;
                &lt;synchronous&gt;true&lt;/synchronous&gt;
                &lt;responseType&gt;tTemporaryUrl&lt;/responseType&gt;
             &lt;/responseDefinition&gt;
@@ -1189,32 +1189,32 @@
         <outtemplate>&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
    &lt;soap:Header&gt;
       &lt;wsa:Action&gt;www.gmc.net/PNetTWebService/PNetTWebServices/RunJobResponse&lt;/wsa:Action&gt;
-      &lt;wsa:MessageID&gt;urn:uuid:5998fde8-17f2-4d4f-a1d1-b254d55d13fb&lt;/wsa:MessageID&gt;
-      &lt;wsa:RelatesTo&gt;urn:uuid:8114ea1f-f56d-4999-8929-b08e62469f18&lt;/wsa:RelatesTo&gt;
+      &lt;wsa:MessageID&gt;urn:uuid:a4b011bc-1d69-448d-950f-3fe9989cfed8&lt;/wsa:MessageID&gt;
+      &lt;wsa:RelatesTo&gt;urn:uuid:7ce2ca10-a5b1-4dfd-8c16-6f931987945b&lt;/wsa:RelatesTo&gt;
       &lt;wsa:To&gt;http://schemas.xmlsoap.org/ws/2004/08/addressing/role/anonymous&lt;/wsa:To&gt;
       &lt;wsse:Security&gt;
-         &lt;wsu:Timestamp wsu:Id="Timestamp-459c4c90-e49a-46c3-a9fc-a7c35121b583"&gt;
-            &lt;wsu:Created&gt;2014-09-25T05:53:26Z&lt;/wsu:Created&gt;
-            &lt;wsu:Expires&gt;2014-09-25T05:58:26Z&lt;/wsu:Expires&gt;
+         &lt;wsu:Timestamp wsu:Id="Timestamp-d9d8ba28-0407-467d-8325-823724fda7b0"&gt;
+            &lt;wsu:Created&gt;2014-09-25T11:32:12Z&lt;/wsu:Created&gt;
+            &lt;wsu:Expires&gt;2014-09-25T11:37:12Z&lt;/wsu:Expires&gt;
          &lt;/wsu:Timestamp&gt;
       &lt;/wsse:Security&gt;
    &lt;/soap:Header&gt;
    &lt;soap:Body&gt;
       &lt;RunJobResponse xmlns="www.gmc.net/PNetTWebService/PNetTWebServices"&gt;
-         &lt;runWorkFlowRes ServerName="PNetTNetServerDSReader1"&gt;
-            &lt;log&gt;Status message 0856:Opening workflow 2 vcs://data/GmcApiShowCase/wfd/mobileProofMultipage.wfd.
+         &lt;runWorkFlowRes serverName="PNetTNetServer1"&gt;
+            &lt;log&gt;Status message 0856:Opening workflow 3 vcs://data/GmcApiShowCase/wfd/mobileProofMultipage.wfd.
 Warning 7880:Workflow: vcs:\\data\GmcApiShowCase\wfd\mobileProofMultipage.wfd. File C:/Windows/Fonts/arial.ttf is different. Using it anyway.
 Status message 0857:Opened workflow vcs://data/GmcApiShowCase/wfd/mobileProofMultipage.wfd.
-Status message 0860:Running commandline -e HTML -o OutputMobile -shbeg 1 -shend 1 -messageignoreabort 0565 -wsmimages c:/MobileApi/Store/WorkingDirectory/mobileapi/9737327c5cc44fddbaf4f5d2c3f980d9/ -autoskipmissing -f c:/MobileApi/Store/WorkingDirectory/mobileapi/9737327c5cc44fddbaf4f5d2c3f980d9/output.HTML.
+Status message 0860:Running commandline -e HTML -o OutputMobile -shbeg 1 -shend 1 -messageignoreabort 0565 -wsmimages C:/MobileApi/Store/WorkingDirectory/mobileapi/6999df118eb94bfb9b940587dcd5d56f/ -autoskipmissing -f C:/MobileApi/Store/WorkingDirectory/mobileapi/6999df118eb94bfb9b940587dcd5d56f/output.HTML.
 Status message 0884:Running module OutputMobile.
 Status message 0007:Preprocessing started.
-Status message 0008:Preprocessing finished (duration 0:00:00.000, sheets 5, tempsize 1202).
-Status message 0645:Job started (engine HTML, range 1-1, copies 1, file C:\MobileApi\Store\WorkingDirectory\mobileapi\9737327c5cc44fddbaf4f5d2c3f980d9\output.HTML).
-Status message 0003:Job finished (duration 0:00:00.031, sheets 1, sheets/min 1935.48). &lt;/log&gt;
+Status message 0008:Preprocessing finished (duration 0:00:00.011, sheets 5, tempsize 1202).
+Status message 0645:Job started (engine HTML, range 1-1, copies 1, file C:\MobileApi\Store\WorkingDirectory\mobileapi\6999df118eb94bfb9b940587dcd5d56f\output.HTML).
+Status message 0003:Job finished (duration 0:00:00.039, sheets 1, sheets/min 1538.46). &lt;/log&gt;
             &lt;source&gt;
-               &lt;url&gt;http://dynamiccontract.gmc.net/mobileapi/Proof.axd?ext=.HTML&amp;amp;size=104113&amp;amp;server=PNetTNetServerDSReader1&amp;amp;spoolpath=9737327c5cc44fddbaf4f5d2c3f980d9%2foutput.HTML&amp;amp;jobid=166&lt;/url&gt;
+               &lt;url&gt;http://gmcfinovate2014.cloudapp.net/mobileapi/Proof.axd?ext=.HTML&amp;amp;size=104113&amp;amp;server=PNetTNetServer1&amp;amp;spoolpath=6999df118eb94bfb9b940587dcd5d56f%2foutput.HTML&amp;amp;jobid=16&amp;amp;sh=I0wCKIR6KB6GRyQVZwT9NMG5tDU%3d&amp;amp;user=31&lt;/url&gt;
             &lt;/source&gt;
-            &lt;JobId&gt;166&lt;/JobId&gt;
+            &lt;JobId&gt;16&lt;/JobId&gt;
          &lt;/runWorkFlowRes&gt;
       &lt;/RunJobResponse&gt;
    &lt;/soap:Body&gt;
