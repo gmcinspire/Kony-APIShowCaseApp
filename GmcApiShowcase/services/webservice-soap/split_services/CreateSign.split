@@ -583,39 +583,42 @@
         <outtemplate>&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
    &lt;soap:Header&gt;
       &lt;wsa:Action&gt;www.gmc.net/PNetTWebService/PNetTWebServices/CreateSignResponse&lt;/wsa:Action&gt;
-      &lt;wsa:MessageID&gt;urn:uuid:c38c9651-d5f5-4576-a5a8-c62fbca995de&lt;/wsa:MessageID&gt;
-      &lt;wsa:RelatesTo&gt;urn:uuid:c1f5f30a-eca6-4e91-b82e-8dda6a944684&lt;/wsa:RelatesTo&gt;
+      &lt;wsa:MessageID&gt;urn:uuid:602058fc-b90f-466c-be6d-db99d6dd647c&lt;/wsa:MessageID&gt;
+      &lt;wsa:RelatesTo&gt;urn:uuid:b653b97d-e498-4ca5-bc4b-7c8917d4cb38&lt;/wsa:RelatesTo&gt;
       &lt;wsa:To&gt;http://schemas.xmlsoap.org/ws/2004/08/addressing/role/anonymous&lt;/wsa:To&gt;
       &lt;wsse:Security&gt;
-         &lt;wsu:Timestamp wsu:Id="Timestamp-664bbbed-52a4-4a0c-b88e-930f653b9a57"&gt;
-            &lt;wsu:Created&gt;2014-09-25T09:06:50Z&lt;/wsu:Created&gt;
-            &lt;wsu:Expires&gt;2014-09-25T09:11:50Z&lt;/wsu:Expires&gt;
+         &lt;wsu:Timestamp wsu:Id="Timestamp-a6b3a4ef-784a-4039-b543-f2cf04a7ee7a"&gt;
+            &lt;wsu:Created&gt;2014-10-01T13:56:08Z&lt;/wsu:Created&gt;
+            &lt;wsu:Expires&gt;2014-10-01T14:01:08Z&lt;/wsu:Expires&gt;
          &lt;/wsu:Timestamp&gt;
       &lt;/wsse:Security&gt;
    &lt;/soap:Header&gt;
    &lt;soap:Body&gt;
       &lt;CreateSignResponse xmlns="www.gmc.net/PNetTWebService/PNetTWebServices"&gt;
-         &lt;comCreateSignRes ServerName="PNetTNetServerDSReader1"&gt;
-            &lt;log&gt;Status message 0856:Opening workflow 2 vcs:V:2//data/GmcApiShowCase/wfd/mobileProofSigning.wfd.
-Status message 0857:Opened workflow vcs:V:2//data/GmcApiShowCase/wfd/mobileProofSigning.wfd.
-Status message 0860:Running commandline -e pdf -difXMLDataInput1 c:/MobileApi/Store/WorkingDirectory/mobileapi/1b0b6dcf42fe48368624da181a2a2783/data0.dat -messageignoreabort 0565 -wsmimages c:/MobileApi/Store/WorkingDirectory/mobileapi/1b0b6dcf42fe48368624da181a2a2783/ -autoskipmissing -f memory://d1bbd57b37514bb389caa3ce1a1d0777_output.pdf.
+         &lt;createSignRes&gt;
+            &lt;log/&gt;
+            &lt;DocumentResponse serverName="PNetTNetServer1"&gt;
+               &lt;log&gt;Status message 0856:Opening workflow 1 vcs://data/GmcApiShowCase/wfd/mobileProofSigning.wfd.
+Status message 0857:Opened workflow vcs://data/GmcApiShowCase/wfd/mobileProofSigning.wfd.
+Status message 0860:Running commandline -e pdf -difXMLDataInput1 C:/MobileApi/logs/WorkingDirectory/mobileapi/587800fe9c524d588d24a066c8c1e4fe/data0.dat -messageignoreabort 0565 -wsmimages C:/MobileApi/logs/WorkingDirectory/mobileapi/587800fe9c524d588d24a066c8c1e4fe/ -autoskipmissing -f memory://67450d7b04e4426b8723c36fb0b9a1f8_output.pdf.
 Status message 0884:Running module Output1.
-Status message 0203:XML Data Input: Opening: c:/MobileApi/Store/WorkingDirectory/mobileapi/1b0b6dcf42fe48368624da181a2a2783/data0.dat.
+Status message 0203:XML Data Input: Opening: C:/MobileApi/logs/WorkingDirectory/mobileapi/587800fe9c524d588d24a066c8c1e4fe/data0.dat.
 Warning 0999: A disconnected variable has been used. (Layout1)
 Status message 0045:Data opened (duration 0:00:00.000, records 1).
 Warning 0999: A disconnected variable has been used. (Layout1)
-Status message 0645:Job started (engine PDF, range 1-end, copies 1, file memory:\\d1bbd57b37514bb389caa3ce1a1d0777_output.pdf).
+Status message 0645:Job started (engine PDF, range 1-end, copies 1, file memory:\\67450d7b04e4426b8723c36fb0b9a1f8_output.pdf).
 Warning 0706:In a variable image the selected variable is constant. Image: Images.Image 13. (Layout1)
 Warning 0999: A disconnected variable has been used. (Layout1)
 Warning 0706:In a variable image the selected variable is constant. Image: Images.Image 14. (Layout1)
 Warning 0999: A disconnected variable has been used. (Layout1)
-Status message 0003:Job finished (duration 0:00:00.015, sheets 1, sheets/min 4000.00). &lt;/log&gt;
-            &lt;Package Id="1dbb1392-4b49-4120-b963-0b60edfad32f"&gt;
-               &lt;Sign idSigner="10"&gt;
-                  &lt;Token&gt;YWVkNmYxYTMtYmU4OC00NTgwLTk1ZGMtYTk5N2ExNDRjMDVh&lt;/Token&gt;
-               &lt;/Sign&gt;
+Status message 0003:Job finished (duration 0:00:00.018, sheets 1, sheets/min 3333.33). &lt;/log&gt;
+            &lt;/DocumentResponse&gt;
+            &lt;Package id="2d143193-659d-4833-984d-bef4d19acedc"&gt;
+               &lt;Signer id="10"&gt;
+                  &lt;Token&gt;MTM4ZTI0ZDItNmVhNy00MGIzLWIxZjYtODExZjZmNGQxYTY3&lt;/Token&gt;
+               &lt;/Signer&gt;
             &lt;/Package&gt;
-         &lt;/comCreateSignRes&gt;
+         &lt;/createSignRes&gt;
       &lt;/CreateSignResponse&gt;
    &lt;/soap:Body&gt;
 &lt;/soap:Envelope&gt;
@@ -820,7 +823,7 @@ Status message 0003:Job finished (duration 0:00:00.015, sheets 1, sheets/min 400
             <passNull>false</passNull>
             <recordid></recordid>
             <smsname></smsname>
-            <source>//Package/@Id</source>
+            <source>//Package/@id</source>
             <srcformatvalue></srcformatvalue>
             <target>response</target>
             <targetdatatype></targetdatatype>
@@ -842,7 +845,7 @@ Status message 0003:Job finished (duration 0:00:00.015, sheets 1, sheets/min 400
             <passNull>false</passNull>
             <recordid></recordid>
             <smsname></smsname>
-            <source>//Package/Sign</source>
+            <source>//Package/Signer</source>
             <srcformatvalue></srcformatvalue>
             <target>response</target>
             <targetdatatype></targetdatatype>
@@ -864,7 +867,7 @@ Status message 0003:Job finished (duration 0:00:00.015, sheets 1, sheets/min 400
             <passNull>false</passNull>
             <recordid></recordid>
             <smsname></smsname>
-            <source>//@idSigner</source>
+            <source>//@id</source>
             <srcformatvalue></srcformatvalue>
             <target>response</target>
             <targetdatatype></targetdatatype>
@@ -959,7 +962,7 @@ Status message 0003:Job finished (duration 0:00:00.015, sheets 1, sheets/min 400
             <testvalue></testvalue>
             <value>errorCollection</value>
         </outparam>
-        <password>pass</password>
+        <password></password>
         <postclassname></postclassname>
         <preclassname></preclassname>
         <proxyname></proxyname>
@@ -972,9 +975,9 @@ Status message 0003:Job finished (duration 0:00:00.015, sheets 1, sheets/min 400
         <smsenabled>false</smsenabled>
         <soapaction>www.gmc.net/PNetTWebService/PNetTWebServices/CreateSign</soapaction>
         <timeout></timeout>
-        <url>http://dynamiccontract.gmc.net/mobileapi/DocumentSign.asmx</url>
+        <url>http://api.gmc.net/mobileapi/DocumentSign.asmx</url>
         <urlprovider></urlprovider>
-        <userid>demo</userid>
+        <userid></userid>
         <version>1.1</version>
         <wsdlurl>http://localhost/PNetTWebServices/DocumentSign.asmx?wsdl</wsdlurl>
     </soapservice>

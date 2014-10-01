@@ -30,7 +30,7 @@
             <srcformatvalue></srcformatvalue>
             <target></target>
             <targetdatatype></targetdatatype>
-            <testvalue>25c7c13b-8a8f-4e48-8f4a-b35573828f61</testvalue>
+            <testvalue>0639dfd7-5570-455a-80a5-bee44dd891a1</testvalue>
             <value></value>
         </inparam>
         <inparam>
@@ -52,7 +52,7 @@
             <srcformatvalue></srcformatvalue>
             <target></target>
             <targetdatatype></targetdatatype>
-            <testvalue>StudenLoan</testvalue>
+            <testvalue>myDocumentId</testvalue>
             <value></value>
         </inparam>
         <intemplate>&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
@@ -221,23 +221,25 @@
         <outtemplate>&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
    &lt;soap:Header&gt;
       &lt;wsa:Action&gt;www.gmc.net/PNetTWebService/PNetTWebServices/GetPackageStatusResponse&lt;/wsa:Action&gt;
-      &lt;wsa:MessageID&gt;urn:uuid:167cb670-2da4-4d9e-8097-142206c86268&lt;/wsa:MessageID&gt;
-      &lt;wsa:RelatesTo&gt;urn:uuid:98e8f473-ee91-4ca1-a770-e602105753aa&lt;/wsa:RelatesTo&gt;
+      &lt;wsa:MessageID&gt;urn:uuid:5496211c-270b-431e-9d87-65665abff490&lt;/wsa:MessageID&gt;
+      &lt;wsa:RelatesTo&gt;urn:uuid:40a5c504-961f-4093-a192-fd183bc22922&lt;/wsa:RelatesTo&gt;
       &lt;wsa:To&gt;http://schemas.xmlsoap.org/ws/2004/08/addressing/role/anonymous&lt;/wsa:To&gt;
       &lt;wsse:Security&gt;
-         &lt;wsu:Timestamp wsu:Id="Timestamp-47be94c7-a916-480d-a3ed-ce02c1443d11"&gt;
-            &lt;wsu:Created&gt;2014-09-25T09:22:09Z&lt;/wsu:Created&gt;
-            &lt;wsu:Expires&gt;2014-09-25T09:27:09Z&lt;/wsu:Expires&gt;
+         &lt;wsu:Timestamp wsu:Id="Timestamp-aac7c1f4-4541-44fb-9251-cdd971e77a1f"&gt;
+            &lt;wsu:Created&gt;2014-10-01T13:56:18Z&lt;/wsu:Created&gt;
+            &lt;wsu:Expires&gt;2014-10-01T14:01:18Z&lt;/wsu:Expires&gt;
          &lt;/wsu:Timestamp&gt;
       &lt;/wsse:Security&gt;
    &lt;/soap:Header&gt;
    &lt;soap:Body&gt;
       &lt;GetPackageStatusResponse xmlns="www.gmc.net/PNetTWebService/PNetTWebServices"&gt;
-         &lt;comGetPackageStatusRes xmlns="www.gmc.net/PNetTWebService/DocumentSign"&gt;
-            &lt;Package Status="SIGNING_PENDING"&gt;
-               &lt;Document DocumentName="25c7c13b-8a8f-4e48-8f4a-b35573828f61_myDocumentId.pdf" Id="myDocumentId" Status="SIGNING_PENDING"&gt;
-                  &lt;Sign Id="sin0gPUyu5A1" Status="SIGNING_PENDING"/&gt;
-                  &lt;Sign Id="10" Status="SIGNING_PENDING"/&gt;
+         &lt;comGetPackageStatusRes&gt;
+            &lt;Package status="COMPLETE"&gt;
+               &lt;Document id="default-consent" status="COMPLETE"&gt;
+                  &lt;Sign id="1" status="COMPLETE"/&gt;
+               &lt;/Document&gt;
+               &lt;Document documentName="0639dfd7-5570-455a-80a5-bee44dd891a1_1.pdf" id="1" status="DOCUMENT_COMPLETE"&gt;
+                  &lt;Sign id="1" status="COMPLETE"/&gt;
                &lt;/Document&gt;
             &lt;/Package&gt;
          &lt;/comGetPackageStatusRes&gt;
@@ -476,7 +478,7 @@
             <passNull>false</passNull>
             <recordid></recordid>
             <smsname></smsname>
-            <source>Document/@Status</source>
+            <source>Document/@status</source>
             <srcformatvalue></srcformatvalue>
             <target>response</target>
             <targetdatatype></targetdatatype>
@@ -498,7 +500,7 @@
             <passNull>false</passNull>
             <recordid></recordid>
             <smsname></smsname>
-            <source>Document/@Id</source>
+            <source>Document/@id</source>
             <srcformatvalue></srcformatvalue>
             <target>response</target>
             <targetdatatype></targetdatatype>
@@ -542,7 +544,7 @@
             <passNull>false</passNull>
             <recordid></recordid>
             <smsname></smsname>
-            <source>Sign/@Id</source>
+            <source>Sign/@id</source>
             <srcformatvalue></srcformatvalue>
             <target>response</target>
             <targetdatatype></targetdatatype>
@@ -564,7 +566,7 @@
             <passNull>false</passNull>
             <recordid></recordid>
             <smsname></smsname>
-            <source>Sign/@Status</source>
+            <source>Sign/@status</source>
             <srcformatvalue></srcformatvalue>
             <target>response</target>
             <targetdatatype></targetdatatype>
@@ -659,7 +661,7 @@
             <testvalue></testvalue>
             <value>errorCollection</value>
         </outparam>
-        <password>pass</password>
+        <password></password>
         <postclassname></postclassname>
         <preclassname></preclassname>
         <proxyname></proxyname>
@@ -672,9 +674,9 @@
         <smsenabled>false</smsenabled>
         <soapaction>www.gmc.net/PNetTWebService/PNetTWebServices/GetPackageStatus</soapaction>
         <timeout></timeout>
-        <url>http://gmcfinovate2014.cloudapp.net/mobileapi/DocumentSign.asmx</url>
+        <url>http://api.gmc.net/mobileapi/DocumentSign.asmx</url>
         <urlprovider></urlprovider>
-        <userid>demo</userid>
+        <userid></userid>
         <version>1.1</version>
         <wsdlurl>http://localhost/PNetTWebServices/DocumentSign.asmx?wsdl</wsdlurl>
     </soapservice>

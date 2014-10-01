@@ -546,7 +546,7 @@
                 <seqname></seqname>
             </evtSequence>
         </onOrientationChange>
-        <titlebar>false</titlebar>
+        <titlebar>true</titlebar>
         <footerOverlap>false</footerOverlap>
         <headerOverlap>false</headerOverlap>
         <c_isModal>false</c_isModal>

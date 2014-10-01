@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="targetfiltersettings.xml">
-	<item value="false" key="mixedBB"/>
 	<item value="false" key="spaipad"/>
-	<item value="false" key="mixedIphone"/>
+	<item value="false" key="mixedBB"/>
 	<item value="false" key="spaiphone"/>
+	<item value="false" key="mixedIphone"/>
 	<item value="false" key="mixedAndroidTab"/>
 	<item value="true" key="android"/>
 	<item value="false" key="spaandroid"/>
@@ -26,17 +26,17 @@
 	<item value="false" key="windows8"/>
 	<item value="false" key="windowmobil"/>
 	<item value="false" key="xhtmladvnth"/>
-	<item value="false" key="xhtmladvpalm"/>
 	<item value="false" key="desktop_kiosk"/>
+	<item value="false" key="xhtmladvpalm"/>
 	<item value="true" key="iphone"/>
-	<item value="false" key="palm"/>
 	<item value="false" key="blackberry"/>
+	<item value="false" key="palm"/>
 	<item value="false" key="xhtmladviphone"/>
 	<item value="false" key="spabb"/>
 	<item value="false" key="windowmobil65"/>
 	<item value="true" key="wrapperIpad"/>
-	<item value="false" key="spatabwindows"/>
 	<item value="false" key="windowphone8"/>
+	<item value="false" key="spatabwindows"/>
 	<item value="false" key="spabbnth"/>
 	<item value="false" key="xhtmladvbb"/>
 	<item value="false" key="xhtmlnormal"/>

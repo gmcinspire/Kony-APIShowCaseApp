@@ -376,13 +376,13 @@
         <outtemplate>&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
    &lt;soap:Header&gt;
       &lt;wsa:Action&gt;www.gmc.net/PNetTWebService/PNetTWebServices/ListResponse&lt;/wsa:Action&gt;
-      &lt;wsa:MessageID&gt;urn:uuid:56f22040-8e35-4b87-bed7-ab8b95906c0a&lt;/wsa:MessageID&gt;
-      &lt;wsa:RelatesTo&gt;urn:uuid:17a3a9b7-efc8-486d-8a9b-77bdf7b29727&lt;/wsa:RelatesTo&gt;
+      &lt;wsa:MessageID&gt;urn:uuid:c08dffd0-0b1b-40c5-9b06-8e5c621a2dc5&lt;/wsa:MessageID&gt;
+      &lt;wsa:RelatesTo&gt;urn:uuid:fa0bde2f-27c0-44c9-9b3b-e8df2a94a060&lt;/wsa:RelatesTo&gt;
       &lt;wsa:To&gt;http://schemas.xmlsoap.org/ws/2004/08/addressing/role/anonymous&lt;/wsa:To&gt;
       &lt;wsse:Security&gt;
-         &lt;wsu:Timestamp wsu:Id="Timestamp-0ae3e03d-c4b1-4239-b51e-3aaddd18ecf6"&gt;
-            &lt;wsu:Created&gt;2014-09-25T05:51:58Z&lt;/wsu:Created&gt;
-            &lt;wsu:Expires&gt;2014-09-25T05:56:58Z&lt;/wsu:Expires&gt;
+         &lt;wsu:Timestamp wsu:Id="Timestamp-17813c31-a60f-43ec-9bb6-7d522e7cb29d"&gt;
+            &lt;wsu:Created&gt;2014-10-01T13:56:23Z&lt;/wsu:Created&gt;
+            &lt;wsu:Expires&gt;2014-10-01T14:01:23Z&lt;/wsu:Expires&gt;
          &lt;/wsu:Timestamp&gt;
       &lt;/wsse:Security&gt;
    &lt;/soap:Header&gt;
@@ -807,7 +807,7 @@
             <testvalue></testvalue>
             <value></value>
         </outparam>
-        <password>pass</password>
+        <password></password>
         <postclassname></postclassname>
         <preclassname></preclassname>
         <proxyname></proxyname>
@@ -820,9 +820,9 @@
         <smsenabled>false</smsenabled>
         <soapaction>www.gmc.net/PNetTWebService/PNetTWebServices/List</soapaction>
         <timeout></timeout>
-        <url>http://dynamiccontract.gmc.net/mobileapi/dbs/xmldb.asmx</url>
+        <url>http://api.gmc.net/mobileapi/dbs/xmldb.asmx</url>
         <urlprovider></urlprovider>
-        <userid>demo</userid>
+        <userid></userid>
         <version>1.1</version>
         <wsdlurl>http://devol.cz.gmc.net/connect/dbs/xmldb.asmx?WSDL</wsdlurl>
     </soapservice>

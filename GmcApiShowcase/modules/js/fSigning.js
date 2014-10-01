@@ -93,7 +93,7 @@ function addSignatureCollection (serviceDefinition) {
 	var signature = {};
 	signature.signerId = SIGNER_ID;
 	signature.signatureXPosition = "500";
-	signature.signatureYPosition = "900";
+	signature.signatureYPosition = "850";
 	signature.signatureOnPage = "0";
 	signature.signatureHeight = "110";
 	signature.signatureWidth = "200";
@@ -103,42 +103,45 @@ function addSignatureCollection (serviceDefinition) {
 }
 
 function asyncCallbackCreateSign(status, response, info) {
+	if (isEmptyResponse(response) == false){
+		dismissLoadingScreen();
+	}
 	if (status == 400) {
 		if (isResponseCorrect(response)) {
 			var packageId = response.packageId;
-			var signerToken = response.signers[0].token;
-			saveValueToStore(KEY_PACKAGE_ID, packageId);
+			var signerToken = 
+				(response.signers[0].signerId == SIGNER_ID)
+				? response.signers[0].token
+				: response.signers[1].token;
 			
+			saveValueToStore(KEY_PACKAGE_ID, packageId);
 			showSigningPage(signerToken);
 		}
-	}
-	if (isEmptyResponse(response) == false){
-		dismissLoadingScreen();
 	}
 }
 
 function asyncCallbackGetPackageStatus(status, response, info) {
+	if (isEmptyResponse(response) == false) {
+		dismissLoadingScreen();
+	}
 	if (status == 400) {
 		if (isResponseCorrect(response)) {
-			var document = response.documents[0];
-			var signers = document.signers;
-			signers = (signers.length == 1) ? signers[0] : signers;
-			var signer = signers[1];
+			var document = 
+				(response.documents[0].id == DOCUMENT_ID)
+				? response.documents[0]
+				: response.documents[1];
 			
 			var title = "Document Status";
 			var message;
-			if (signer.status == "SIGNING_PENDING") {
+			if (document.status == "SIGNING_PENDING") {
 				message = "This document is not yet signed.";
-			} else if (signer.status == "COMPLETE") {
+			} else if (document.status == "DOCUMENT_COMPLETE") {
 				message = "This document is signed.";
 			} else {
 				message = "This document is waiting for authentication.";
 			}
 			gmcAlertInformation(title, message);
 		}
-	}
-	if (isEmptyResponse(response) == false){
-		dismissLoadingScreen();
 	}
 }
 

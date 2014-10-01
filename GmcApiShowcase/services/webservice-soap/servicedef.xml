@@ -5,11 +5,10 @@
    <services>
       <service cachable="false" cacheduration="" id="CreateSign" passwordencrypted="true" smscode="" smsenabled="false" type="soapserviceConnector">
          <service-config>
-            <config-param name="endpointUrl" value="http://dynamiccontract.gmc.net/mobileapi/DocumentSign.asmx"/>
+            <config-param name="endpointUrl" value="http://api.gmc.net/mobileapi/DocumentSign.asmx"/>
             <config-param name="soapAction" value="www.gmc.net/PNetTWebService/PNetTWebServices/CreateSign"/>
-            <config-param name="userid" value="demo"/>
+            <config-param name="userid" value=""/>
             <config-param name="soap-version" value="1.1"/>
-            <config-param name="pwd" value="voYeW7PkBnrFgbmXgdxwOw=="/>
             <config-param name="postprocessorname" value=""/>
             <config-param name="preprocessorname" value=""/>
             <config-param name="urlprovider" value=""/>
@@ -39,9 +38,9 @@
             </template-param>
          </service-input>
          <service-output>
-            <param datatype="string" format="None" formatvalue="" name="packageId" sms-name="" src="//Package/@Id" srcformatvalue="" target="response"/>
-            <dataset id="signers" src="//Package/Sign">
-               <param datatype="string" format="None" formatvalue="" name="signerId" sms-name="" src="//@idSigner" srcformatvalue="" target="response"/>
+            <param datatype="string" format="None" formatvalue="" name="packageId" sms-name="" src="//Package/@id" srcformatvalue="" target="response"/>
+            <dataset id="signers" src="//Package/Signer">
+               <param datatype="string" format="None" formatvalue="" name="signerId" sms-name="" src="//@id" srcformatvalue="" target="response"/>
                <param datatype="string" format="None" formatvalue="" name="token" sms-name="" src="//Token" srcformatvalue="" target="response"/>
             </dataset>
             <dataset id="errorCollection" src="//ErrorCollection">
@@ -55,11 +54,10 @@
       </service>
       <service cachable="false" cacheduration="" id="GetPackageStatus" passwordencrypted="true" smscode="" smsenabled="false" type="soapserviceConnector">
          <service-config>
-            <config-param name="endpointUrl" value="http://gmcfinovate2014.cloudapp.net/mobileapi/DocumentSign.asmx"/>
+            <config-param name="endpointUrl" value="http://api.gmc.net/mobileapi/DocumentSign.asmx"/>
             <config-param name="soapAction" value="www.gmc.net/PNetTWebService/PNetTWebServices/GetPackageStatus"/>
-            <config-param name="userid" value="demo"/>
+            <config-param name="userid" value=""/>
             <config-param name="soap-version" value="1.1"/>
-            <config-param name="pwd" value="voYeW7PkBnrFgbmXgdxwOw=="/>
             <config-param name="postprocessorname" value=""/>
             <config-param name="preprocessorname" value=""/>
             <config-param name="urlprovider" value=""/>
@@ -83,11 +81,11 @@
          </service-input>
          <service-output>
             <dataset id="documents" src="//Package">
-               <param datatype="string" format="None" formatvalue="" name="status" sms-name="" src="Document/@Status" srcformatvalue="" target="response"/>
-               <param datatype="string" format="None" formatvalue="" name="id" sms-name="" src="Document/@Id" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="status" sms-name="" src="Document/@status" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="id" sms-name="" src="Document/@id" srcformatvalue="" target="response"/>
                <dataset id="signers" src="Document">
-                  <param datatype="string" format="None" formatvalue="" name="id" sms-name="" src="Sign/@Id" srcformatvalue="" target="response"/>
-                  <param datatype="string" format="None" formatvalue="" name="status" sms-name="" src="Sign/@Status" srcformatvalue="" target="response"/>
+                  <param datatype="string" format="None" formatvalue="" name="id" sms-name="" src="Sign/@id" srcformatvalue="" target="response"/>
+                  <param datatype="string" format="None" formatvalue="" name="status" sms-name="" src="Sign/@status" srcformatvalue="" target="response"/>
                </dataset>
                <param datatype="string" format="None" formatvalue="" name="documentName" sms-name="" src="Document/@DocumentName" srcformatvalue="" target="response"/>
             </dataset>
@@ -102,11 +100,10 @@
       </service>
       <service cachable="false" cacheduration="" id="List" passwordencrypted="true" smscode="" smsenabled="false" type="soapserviceConnector">
          <service-config>
-            <config-param name="endpointUrl" value="http://dynamiccontract.gmc.net/mobileapi/dbs/xmldb.asmx"/>
+            <config-param name="endpointUrl" value="http://api.gmc.net/mobileapi/dbs/xmldb.asmx"/>
             <config-param name="soapAction" value="www.gmc.net/PNetTWebService/PNetTWebServices/List"/>
-            <config-param name="userid" value="demo"/>
+            <config-param name="userid" value=""/>
             <config-param name="soap-version" value="1.1"/>
-            <config-param name="pwd" value="voYeW7PkBnrFgbmXgdxwOw=="/>
             <config-param name="postprocessorname" value=""/>
             <config-param name="preprocessorname" value=""/>
             <config-param name="urlprovider" value=""/>
@@ -142,11 +139,10 @@
       </service>
       <service cachable="false" cacheduration="" id="QueryProperties" passwordencrypted="true" smscode="" smsenabled="false" type="soapserviceConnector">
          <service-config>
-            <config-param name="endpointUrl" value="http://dynamiccontract.gmc.net/mobileapi/PNetTServices.asmx"/>
+            <config-param name="endpointUrl" value="http://api.gmc.net/mobileapi/PNetTServices.asmx"/>
             <config-param name="soapAction" value="www.gmc.net/PNetTWebService/PNetTWebServices/QueryProperties"/>
-            <config-param name="userid" value="demo"/>
+            <config-param name="userid" value=""/>
             <config-param name="soap-version" value="1.1"/>
-            <config-param name="pwd" value="voYeW7PkBnrFgbmXgdxwOw=="/>
             <config-param name="postprocessorname" value=""/>
             <config-param name="preprocessorname" value=""/>
             <config-param name="urlprovider" value=""/>
@@ -178,11 +174,10 @@
       </service>
       <service cachable="false" cacheduration="" id="RunJob" passwordencrypted="true" smscode="" smsenabled="false" type="soapserviceConnector">
          <service-config>
-            <config-param name="endpointUrl" value="http://dynamiccontract.gmc.net/mobileapi/PNetTServices.asmx"/>
+            <config-param name="endpointUrl" value="http://api.gmc.net/mobileapi/PNetTServices.asmx"/>
             <config-param name="soapAction" value="www.gmc.net/PNetTWebService/PNetTWebServices/RunJob"/>
-            <config-param name="userid" value="demo"/>
+            <config-param name="userid" value=""/>
             <config-param name="soap-version" value="1.1"/>
-            <config-param name="pwd" value="voYeW7PkBnrFgbmXgdxwOw=="/>
             <config-param name="postprocessorname" value=""/>
             <config-param name="preprocessorname" value=""/>
             <config-param name="urlprovider" value=""/>
@@ -219,11 +214,10 @@
       </service>
       <service cachable="false" cacheduration="" id="RunJobMultipage" passwordencrypted="true" smscode="" smsenabled="false" type="soapserviceConnector">
          <service-config>
-            <config-param name="endpointUrl" value="http://dynamiccontract.gmc.net/mobileapi/PNetTServices.asmx"/>
+            <config-param name="endpointUrl" value="http://api.gmc.net/mobileapi/PNetTServices.asmx"/>
             <config-param name="soapAction" value="www.gmc.net/PNetTWebService/PNetTWebServices/RunJob"/>
-            <config-param name="userid" value="demo"/>
+            <config-param name="userid" value=""/>
             <config-param name="soap-version" value="1.1"/>
-            <config-param name="pwd" value="voYeW7PkBnrFgbmXgdxwOw=="/>
             <config-param name="postprocessorname" value=""/>
             <config-param name="preprocessorname" value=""/>
             <config-param name="urlprovider" value=""/>

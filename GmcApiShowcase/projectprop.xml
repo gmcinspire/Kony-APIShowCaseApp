@@ -32,7 +32,7 @@
     <attributes name="certs_trust_store_type" value="JKS"/>
     <attributes name="WP8_ID_CAP_WALLET_PAYMENTINSTRUMENTS" value="true"/>
     <attributes name="removeprintstatements" value="true"/>
-    <attributes name="appversionkey" value="9.4.3"/>
+    <attributes name="appversionkey" value="9.4.1"/>
     <attributes name="WP8_ID_CAP_GAMERSERVICES" value="true"/>
     <attributes name="BIND_WALLPAPER" value="false"/>
     <attributes name="isNewAppWithRespectToAndroidPackageName" value="true"/>
@@ -189,7 +189,7 @@
     <attributes name="EXPAND_STATUS_BAR" value="false"/>
     <attributes name="enableactionbar" value="false"/>
     <attributes name="WAKE_LOCK" value="false"/>
-    <attributes name="cloud_config_ipaddress_list" value="http://dynamiccontract.gmc.net:80/kony"/>
+    <attributes name="cloud_config_ipaddress_list" value="http://api.gmc.net:80/kony"/>
     <attributes name="project.type" value="js"/>
     <attributes name="tcxhtmlbasefontsize" value="10"/>
     <attributes name="ID_CAP_CONTACTS" value="true"/>
@@ -330,7 +330,7 @@
     <attributes name="androidInstallLocnPref" value="false"/>
     <attributes name="tcpalm240basefontsize" value="10"/>
     <attributes name="CHANGE_WIFI_MULTICAST_STATE" value="false"/>
-    <attributes name="cloud_url" value="http://dynamiccontract.gmc.net:80/kony"/>
+    <attributes name="cloud_url" value="http://api.gmc.net:80/kony"/>
     <attributes name="certs_key_store_pwd" value="kds/0eUc+i3BqFqSkpCk4g=="/>
     <attributes name="CALL_PRIVILEGED" value="false"/>
     <attributes name="SUBSCRIBED_FEEDS_READ" value="false"/>
@@ -341,7 +341,7 @@
     <attributes name="extendBottom" value="false"/>
     <attributes name="appversioncode" value="1"/>
     <attributes name="RECEIVE_WAP_PUSH" value="false"/>
-    <attributes name="cloud_selected_ipaddress_list" value="http://127.0.0.1:8080,http://dynamiccontract.gmc.net:80/kony"/>
+    <attributes name="cloud_selected_ipaddress_list" value="http://127.0.0.1:8080,http://api.gmc.net:80/kony"/>
     <attributes name="customgcmbroadcastreceiver" value=""/>
     <attributes name="WP8_ID_CAP_REMOVABLE_STORAGE" value="true"/>
     <attributes name="MODIFY_PHONE_STATE" value="false"/>
@@ -353,7 +353,7 @@
     <attributes name="wp8cyclesmallkey" value=""/>
     <attributes name="bb10description" value=""/>
     <attributes name="ACCESS_LOCATION_EXTRA_COMMANDS" value="false"/>
-    <attributes name="appaddrkey" value="http://dynamiccontract.gmc.net:80/kony"/>
+    <attributes name="appaddrkey" value="http://api.gmc.net:80/kony"/>
     <attributes name="andmanifesttags" value=""/>
     <attributes name="WRITE_CONTACTS" value="false"/>
     <attributes name="VIBRATE" value="false"/>
@@ -393,7 +393,7 @@
     <attributes name="WP8_ID_CAP_WALLET" value="true"/>
     <attributes name="WP8_ID_CAP_WEBBROWSERCOMPONENT" value="true"/>
     <attributes name="ID_CAP_CAMERA" value="false"/>
-    <attributes name="svcaddrkey" value="http://dynamiccontract.gmc.net:80/kony"/>
+    <attributes name="svcaddrkey" value="http://api.gmc.net:80/kony"/>
     <attributes name="spaandroidtab1024basefontsize" value="16"/>
     <attributes name="SIGNAL_PERSISTENT_PROCESSES" value="false"/>
     <attributes name="tcbb240basefontsize" value="12"/>

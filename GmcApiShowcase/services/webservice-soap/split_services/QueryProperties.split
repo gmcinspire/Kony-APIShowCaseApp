@@ -1131,28 +1131,28 @@
         <outtemplate>&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
    &lt;soap:Header&gt;
       &lt;wsa:Action&gt;www.gmc.net/PNetTWebService/PNetTWebServices/QueryPropertiesResponse&lt;/wsa:Action&gt;
-      &lt;wsa:MessageID&gt;urn:uuid:963d22e9-06b2-4744-acd0-f9bf73fa76eb&lt;/wsa:MessageID&gt;
-      &lt;wsa:RelatesTo&gt;urn:uuid:5a3544c6-5986-4103-bf00-3b8c9b852e0e&lt;/wsa:RelatesTo&gt;
+      &lt;wsa:MessageID&gt;urn:uuid:39bdcc51-aa55-4bd7-bd63-2e0213c6053e&lt;/wsa:MessageID&gt;
+      &lt;wsa:RelatesTo&gt;urn:uuid:feed07a2-129a-411e-bcb7-a077d63b71b1&lt;/wsa:RelatesTo&gt;
       &lt;wsa:To&gt;http://schemas.xmlsoap.org/ws/2004/08/addressing/role/anonymous&lt;/wsa:To&gt;
       &lt;wsse:Security&gt;
-         &lt;wsu:Timestamp wsu:Id="Timestamp-2ff1da6a-0177-4f3c-a5d4-f027c2165673"&gt;
-            &lt;wsu:Created&gt;2014-09-25T05:52:36Z&lt;/wsu:Created&gt;
-            &lt;wsu:Expires&gt;2014-09-25T05:57:36Z&lt;/wsu:Expires&gt;
+         &lt;wsu:Timestamp wsu:Id="Timestamp-9518c6f7-1ce5-4c44-a9f6-174586e1ba3f"&gt;
+            &lt;wsu:Created&gt;2014-10-01T13:56:31Z&lt;/wsu:Created&gt;
+            &lt;wsu:Expires&gt;2014-10-01T14:01:31Z&lt;/wsu:Expires&gt;
          &lt;/wsu:Timestamp&gt;
       &lt;/wsse:Security&gt;
    &lt;/soap:Header&gt;
    &lt;soap:Body&gt;
       &lt;QueryPropertiesResponse xmlns="www.gmc.net/PNetTWebService/PNetTWebServices"&gt;
-         &lt;queryJobPropertiesRes ServerName="PNetTNetServerDSReader1" cacheImpact="ItemCreated"&gt;
+         &lt;queryJobPropertiesRes cacheImpact="ItemCreated" serverName="PNetTNetServer1"&gt;
             &lt;log&gt;Status message 0856:Opening workflow 2 vcs://data/GmcApiShowCase/wfd/mobileProofMultipage.wfd.
 Warning 7880:Workflow: vcs:\\data\GmcApiShowCase\wfd\mobileProofMultipage.wfd. File C:/Windows/Fonts/arial.ttf is different. Using it anyway.
 Status message 0857:Opened workflow vcs://data/GmcApiShowCase/wfd/mobileProofMultipage.wfd.
-Status message 0860:Running commandline -e info -messageignoreabort 0565 -wsmimages c:/MobileApi/Store/WorkingDirectory/mobileapi/1bf8842db15e4ecbb04f6228efe8b279/ -autoskipmissing.
+Status message 0860:Running commandline -e info -messageignoreabort 0565 -wsmimages C:/MobileApi/logs/WorkingDirectory/mobileapi/765069137b224d23a60f085de0d590cf/ -autoskipmissing.
 Status message 0884:Running module OutputMobile.
 Status message 0007:Preprocessing started.
-Status message 0008:Preprocessing finished (duration 0:00:00.015, sheets 5, tempsize 1202).
+Status message 0008:Preprocessing finished (duration 0:00:00.013, sheets 5, tempsize 1202).
 Status message 0002:Job started (engine Info, range 1-end, copies 1).
-Status message 0003:Job finished (duration 0:00:00.031, sheets 5, sheets/min 9677.42). &lt;/log&gt;
+Status message 0003:Job finished (duration 0:00:00.038, sheets 5, sheets/min 7894.74). &lt;/log&gt;
             &lt;JobProperties&gt;
                &lt;Property&gt;
                   &lt;Name&gt;PageData0&lt;/Name&gt;
@@ -1393,7 +1393,7 @@ Status message 0003:Job finished (duration 0:00:00.031, sheets 5, sheets/min 967
             <testvalue></testvalue>
             <value>properties</value>
         </outparam>
-        <password>pass</password>
+        <password></password>
         <postclassname></postclassname>
         <preclassname></preclassname>
         <proxyname></proxyname>
@@ -1406,9 +1406,9 @@ Status message 0003:Job finished (duration 0:00:00.031, sheets 5, sheets/min 967
         <smsenabled>false</smsenabled>
         <soapaction>www.gmc.net/PNetTWebService/PNetTWebServices/QueryProperties</soapaction>
         <timeout></timeout>
-        <url>http://dynamiccontract.gmc.net/mobileapi/PNetTServices.asmx</url>
+        <url>http://api.gmc.net/mobileapi/PNetTServices.asmx</url>
         <urlprovider></urlprovider>
-        <userid>demo</userid>
+        <userid></userid>
         <version>1.1</version>
         <wsdlurl>http://localhost/PNetTWebServices/PNetTServices.asmx?WSDL</wsdlurl>
     </soapservice>
