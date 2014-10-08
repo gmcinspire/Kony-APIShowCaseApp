@@ -52,7 +52,7 @@
             <srcformatvalue></srcformatvalue>
             <target></target>
             <targetdatatype></targetdatatype>
-            <testvalue>HTML</testvalue>
+            <testvalue>image</testvalue>
             <value></value>
         </inparam>
         <inparam>
@@ -77,6 +77,50 @@
             <testvalue>1</testvalue>
             <value></value>
         </inparam>
+        <inparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>parameter</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source></source>
+            <srcformatvalue></srcformatvalue>
+            <target></target>
+            <targetdatatype></targetdatatype>
+            <testvalue>-imageformat</testvalue>
+            <value></value>
+        </inparam>
+        <inparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>parameterValue</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source></source>
+            <srcformatvalue></srcformatvalue>
+            <target></target>
+            <targetdatatype></targetdatatype>
+            <testvalue>jpg</testvalue>
+            <value></value>
+        </inparam>
         <intemplate>&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
    &lt;soap:Header&gt;
       &lt;AuthenticationSoapHeader xmlns="www.gmc.net/PNetTWebService/PNetTWebServices"&gt;
@@ -96,6 +140,10 @@
             &lt;command&gt;
                &lt;commandName&gt;-e&lt;/commandName&gt;
                &lt;commandValue&gt;$engine&lt;/commandValue&gt;
+            &lt;/command&gt;
+            &lt;command&gt;
+               &lt;commandName&gt;$parameter&lt;/commandName&gt;
+               &lt;commandValue&gt;$parameterValue&lt;/commandValue&gt;
             &lt;/command&gt;
             &lt;command&gt;
                &lt;commandName&gt;-o&lt;/commandName&gt;
@@ -1189,13 +1237,13 @@
         <outtemplate>&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
    &lt;soap:Header&gt;
       &lt;wsa:Action&gt;www.gmc.net/PNetTWebService/PNetTWebServices/RunJobResponse&lt;/wsa:Action&gt;
-      &lt;wsa:MessageID&gt;urn:uuid:fe3483fc-1f6e-4bdf-aef1-4668a9330104&lt;/wsa:MessageID&gt;
-      &lt;wsa:RelatesTo&gt;urn:uuid:119ca60e-41f7-48d4-8f25-556467f40f42&lt;/wsa:RelatesTo&gt;
+      &lt;wsa:MessageID&gt;urn:uuid:90a752fa-81aa-4d21-a18d-1482e8754c12&lt;/wsa:MessageID&gt;
+      &lt;wsa:RelatesTo&gt;urn:uuid:dd3247ec-54f7-4288-bfab-178739fb780e&lt;/wsa:RelatesTo&gt;
       &lt;wsa:To&gt;http://schemas.xmlsoap.org/ws/2004/08/addressing/role/anonymous&lt;/wsa:To&gt;
       &lt;wsse:Security&gt;
-         &lt;wsu:Timestamp wsu:Id="Timestamp-c848c172-dc7e-4696-be65-bd6e92ebeb18"&gt;
-            &lt;wsu:Created&gt;2014-10-01T13:56:44Z&lt;/wsu:Created&gt;
-            &lt;wsu:Expires&gt;2014-10-01T14:01:44Z&lt;/wsu:Expires&gt;
+         &lt;wsu:Timestamp wsu:Id="Timestamp-47048878-0ea1-466a-aca6-3524ee71a795"&gt;
+            &lt;wsu:Created&gt;2014-10-07T09:54:05Z&lt;/wsu:Created&gt;
+            &lt;wsu:Expires&gt;2014-10-07T09:59:05Z&lt;/wsu:Expires&gt;
          &lt;/wsu:Timestamp&gt;
       &lt;/wsse:Security&gt;
    &lt;/soap:Header&gt;
@@ -1205,16 +1253,16 @@
             &lt;log&gt;Status message 0856:Opening workflow 2 vcs://data/GmcApiShowCase/wfd/mobileProofMultipage.wfd.
 Warning 7880:Workflow: vcs:\\data\GmcApiShowCase\wfd\mobileProofMultipage.wfd. File C:/Windows/Fonts/arial.ttf is different. Using it anyway.
 Status message 0857:Opened workflow vcs://data/GmcApiShowCase/wfd/mobileProofMultipage.wfd.
-Status message 0860:Running commandline -e HTML -o OutputMobile -shbeg 1 -shend 1 -messageignoreabort 0565 -wsmimages C:/MobileApi/logs/WorkingDirectory/mobileapi/7d517bf8ba394fcb9f75343bedd84dcd/ -autoskipmissing -f C:/MobileApi/logs/WorkingDirectory/mobileapi/7d517bf8ba394fcb9f75343bedd84dcd/output.HTML.
+Status message 0860:Running commandline -e image -imageformat jpg -o OutputMobile -shbeg 1 -shend 1 -messageignoreabort 0565 -wsmimages c:/MobileApi/PNetTNetServerCache/WorkingDirectory/mobileapi/a331f248a9d34d6992b6c832eb8299a4/ -autoskipmissing -f c:/MobileApi/PNetTNetServerCache/WorkingDirectory/mobileapi/a331f248a9d34d6992b6c832eb8299a4/outputjpg.
 Status message 0884:Running module OutputMobile.
 Status message 0007:Preprocessing started.
-Status message 0008:Preprocessing finished (duration 0:00:00.008, sheets 5, tempsize 1202).
-Status message 0645:Job started (engine HTML, range 1-1, copies 1, file C:\MobileApi\logs\WorkingDirectory\mobileapi\7d517bf8ba394fcb9f75343bedd84dcd\output.HTML).
-Status message 0003:Job finished (duration 0:00:00.061, sheets 1, sheets/min 983.61). &lt;/log&gt;
+Status message 0008:Preprocessing finished (duration 0:00:00.010, sheets 5, tempsize 1202).
+Status message 0645:Job started (engine Image, range 1-1, copies 1, file C:\MobileApi\PNetTNetServerCache\WorkingDirectory\mobileapi\a331f248a9d34d6992b6c832eb8299a4\outputjpg).
+Status message 0003:Job finished (duration 0:00:00.193, sheets 1, sheets/min 310.88). &lt;/log&gt;
             &lt;source&gt;
-               &lt;url&gt;http://gmcfinovate2014.cloudapp.net/mobileapi/Proof.axd?ext=.HTML&amp;amp;size=104253&amp;amp;server=PNetTNetServer1&amp;amp;spoolpath=7d517bf8ba394fcb9f75343bedd84dcd%2foutput.HTML&amp;amp;jobid=78&amp;amp;sh=jVvtKbTErgsDC98ABzXco9jkGkQ%3d&amp;amp;user=31&lt;/url&gt;
+               &lt;url&gt;http://api.gmc.net/mobileapi/Proof.axd?ext=jpg&amp;amp;size=688212&amp;amp;server=PNetTNetServer1&amp;amp;spoolpath=a331f248a9d34d6992b6c832eb8299a4%2foutputjpg&amp;amp;jobid=334&amp;amp;sh=F9NYu9WuSE4YYhe1B-iw9NX9-YU1&amp;amp;user=31&lt;/url&gt;
             &lt;/source&gt;
-            &lt;JobId&gt;78&lt;/JobId&gt;
+            &lt;JobId&gt;334&lt;/JobId&gt;
          &lt;/runWorkFlowRes&gt;
       &lt;/RunJobResponse&gt;
    &lt;/soap:Body&gt;

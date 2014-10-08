@@ -32,9 +32,22 @@ function showRunJobOutput(engine, wfd, asyncCallback) {
 		surname: surname,
 		engine: engine
 	};
+
+	setImageFormat(serviceSetting);
+
 	var info = {};
 	showLoadingScreen("Loading...");
 	gmcInvokerAsync(serviceSetting, asyncCallback, info);
+}
+
+function setImageFormat(serviceSetting) {
+	if (serviceSetting.engine == "Image") {
+		serviceSetting.parameter = "-imageformat";
+		serviceSetting.parameterValue = "jpg"; 
+	} else {
+		serviceSetting.parameter = "";
+		serviceSetting.parameterValue = "";
+	}
 }
 
 function asyncCallbackShowHtml(status, response, info) {
@@ -68,7 +81,7 @@ function asyncCallbackDownloadPdf(status, response, info) {
 function getDocumentUrl(response) {
 	if (isResponseCorrect(response)) {
 		var documentUrl =  response["url"];
-		return changeDocumentUrl(documentUrl);
+		return decodeURIComponent(documentUrl);
 	}
 	return null;
 }
@@ -90,12 +103,4 @@ function isResponseCorrect(response) {
 		gmcAlertError("Error", "Connection to service failed.");
 	}
 	return correct;
-}
-
-function changeDocumentUrl(documentUrl) {
-	documentUrl = documentUrl.replace("ext=.Raster", "ext=.Jpg");
-	documentUrl = documentUrl.replace("ext=.Image", "ext=.Jpg");
-	documentUrl = decodeURIComponent(documentUrl);
-
-	return documentUrl;	
 }

@@ -37,6 +37,9 @@ function getRunJobOutput(engine, wfd, pageNumber, asyncCallback) {
 		engine: engine,
 		pageNumber: pageNumber
 	};
+
+	setImageFormat(serviceSetting);
+
 	var info = {};
 	info["pageNumber"] = pageNumber;
 	showLoadingScreen("Loading...");

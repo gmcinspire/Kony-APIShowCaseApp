@@ -32,7 +32,7 @@
     <attributes name="certs_trust_store_type" value="JKS"/>
     <attributes name="WP8_ID_CAP_WALLET_PAYMENTINSTRUMENTS" value="true"/>
     <attributes name="removeprintstatements" value="true"/>
-    <attributes name="appversionkey" value="9.4.1"/>
+    <attributes name="appversionkey" value="10.0.1"/>
     <attributes name="WP8_ID_CAP_GAMERSERVICES" value="true"/>
     <attributes name="BIND_WALLPAPER" value="false"/>
     <attributes name="isNewAppWithRespectToAndroidPackageName" value="true"/>
@@ -55,7 +55,7 @@
     <attributes name="bbusemds" value="false"/>
     <attributes name="WP8_ID_CAP_MICROPHONE" value="true"/>
     <attributes name="bb10versionnumber" value=""/>
-    <attributes name="iphonebundleversionkey" value="9.4.3"/>
+    <attributes name="iphonebundleversionkey" value="10.0.1"/>
     <attributes name="wp8packageauthorkey" value=""/>
     <attributes name="READ_HISTORY_BOOKMARKS" value="false"/>
     <attributes name="WP8_ID_CAP_VOIP" value="true"/>
